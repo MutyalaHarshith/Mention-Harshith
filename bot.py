@@ -21,26 +21,26 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow [Harshith](https://t.me/Harshith_Mutyala) on Telegram",
+    "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow [Harshith](https://t.me/MutyalaHarshith) on Telegram [Support Group](https://t.me/MHGCHAT)",
     link_preview=False,
     buttons=(
       [
-        Button.url('Channel', 'https://t.me/Harshith_Mutyala'),
-        Button.url('Group', 'https://t.me/Mutyala_Harshith')
+        Button.url('Channel', 'https://t.me/MutyalaHarshith'),
+        Button.url('Group', 'https://t.me/MHgchat')
       ]
     )
   )
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of Mention-Harshith**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [@Harshith_Mutyala](https://t.me/Harshith_Mutyala) on Telegram"
+  helptext = "**Help Menu of Mention-Harshith**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [Mutyala Harshith](https://t.me/MutyalaHarshith) on Telegram [Support Group](https://t.me/MHGcHaT)"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('Channel', 'https://t.me/Harshith_Mutyala'),
-        Button.url('Group', 'https://t.me/Mutyala_Harshith')
+        Button.url('Channel', 'https://t.me/MutyalaHarshith'),
+        Button.url('Group', 'https://t.me/MHGcHaT')
      ]
     )
   )
@@ -49,7 +49,7 @@ async def help(event):
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command can be use in groups and channels!__")
+    return await event.respond("__This command can be use in groups and channels @MutyalaHarshith!__")
   
   is_admin = False
   try:
@@ -84,7 +84,7 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("__I can't mention members for older messages! (messages which are sent before I'm added to group)__")
   else:
-    return await event.respond("__Reply to a message or give me some text to mention others!__")
+    return await event.respond("__Reply to a message or give me some text to mention others @MutyalaHarshith!__")
   
   spam_chats.append(chat_id)
   usrnum = 0
