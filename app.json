@@ -1,6 +1,8 @@
 {
     "name": "Mention Harshith",
     "description": "A simple mention all for telegram.",
+    "logo": "https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
+    "repo
     "env": {
         "TOKEN": {
             "description": "Enter bot token."
